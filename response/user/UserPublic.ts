@@ -26,11 +26,13 @@ export interface permissionMap {
 export interface entityUserResponse {
 	id: number;
 	displayName: string;
-	email?: string;	// Only set if requesting info for own account
-	noPasswordSet?: boolean; // Will be set when the user was created by external auth provider && has no password set
-	secondFactorEnabled?: boolean;	// Only set if requesting info for own account
-	supporterLevel?: SupporterLevel; // Only set if requesting info for own account
-	permissions?: permissionMap // Only set if requeisting info for own account
+
+	// The Following Fields are optional, only when requesting own user info and/or the neccessary authorization (scopes) is given.
+	email?: string;					// Requires scope: user.email.read 
+	noPasswordSet?: boolean;		// Not possible via App
+	secondFactorEnabled?: boolean;	// Not possible via App
+	supporterLevel?: SupporterLevel;// Requires scope: user.supporter.status.read
+	permissions?: permissionMap
 };
 
 
