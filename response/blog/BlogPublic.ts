@@ -29,13 +29,13 @@ export interface blogResponse {
 	createDate: Date;
 	lastChangeDate: Date;
 	authors: bohnePortrait[] | number[];
-	titleImage: Array<Image>;
-	thumbImage: Array<Image>;
+	titleImage: Array<Image> | string;	// Type string is management only
+	thumbImage: Array<Image> | string;	// Type string is management only
 	links: Array<link>;
 
 	// Promo Extension
 	isVisibleInPromo: boolean;
-	promoImage: Array<Image>;
+	promoImage: Array<Image> | string;	// Type string is management only
 
 	// CI Extension
 	ciIsVisible?: boolean;

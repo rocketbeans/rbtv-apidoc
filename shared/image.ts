@@ -8,6 +8,15 @@ export interface Image {
 
 export const enum ImageType {
 	OAUTHAPPTHUMB = 0,	// OAUTH App Thumbnail
+	CONTENT = 1,		// Used by markdown pages etc (blog, cms ..)
+	BLOG_TITLEIMAGE,	// Used by blog for Title (Header)
+	BLOG_THUMBNAIL,		// Used by blog as article image
+	BLOG_PROMO,			// used by blog for blog-promo-box
+	MEDIA_PROMO,		// Used by Mediathek - Promo Box
+	CDKEY_DOWNLOADTHUMB,// Used by Key/CDKey for Download Item Thumbnail
+	SIMPLESHOP_PRODUCT, // Used by SimpleShop - product image
+	RAFFLE_IMAGE,		// Used by Raffle
+	BOHNE_PORTRAIT,		// Used by Bohne/StaffInfo
 	LAST
 };
 
@@ -29,6 +38,12 @@ export interface ImageTypeDefinition {
 
 	// Upload Via Public ImageController Allowed?
 	uploadAllowed: boolean;
+
+	// Required Permission to upload this image type (null=no special permission required)
+	requiredPermission: string;
+
+	// Browsable in Mediacenter?
+	browsable: boolean;
 
 	// Maxmium Pending per Owner for this type?
 	uploadMaxPending: number;

@@ -54,6 +54,7 @@ export const enum errorCode {
 	ERR_IMAGEUPLOAD_TOOLARGE = 2303,			// Uploaded file exceeds types maximum allowed filesize
 	ERR_IMAGEUPLOAD_INVALID_DIMENSIONS = 2304,	// Imagesize Invalid (min/max size)
 	ERR_IMAGEUPLOAD_FAIL_TEMP = 2305,			// Upload failed, failed to store entity (already pending temp images for this type)
+	ERR_IMAGEUPLOAD_MISSING_PERMISSION = 2306,	// Upload failed, the given image type requires a special permission, which the user-agent does not fulfil
 
 	/** Blog Errors */
 	ERR_BLOG_AUTHOR_NOT_FOUND = 2401,			// The given Author UserID is not found / not a bohne
@@ -62,7 +63,10 @@ export const enum errorCode {
 	ERR_BLOG_CATEGORY_NOT_FOUND = 2404,			// Requested Blog Category not found
 	ERR_BLOG_CATEGORY_INVALID = 2405,			// Requested Blog Category does not match the requirements
 	ERR_BLOG_CATEGORY_ALREADY_EXISTS = 2406,	// Requested Blog Category already exists
-	ERR_BLOG_CATEGORY_CONTAINS_POSTS = 2407,	// Blog Category contains posts and cannot be deleted
+	ERR_BLOG_CATEGORY_CONTAINS_POSTS = 2407,	// Blog Category contains posts and cannot be deleted\
+	ERR_BLOG_INVALID_TITLE_IMAGE = 2408,		// Unknown image id or invalid type - see message for details
+	ERR_BLOG_INVALID_PROMO_IMAGE = 2409,		// Unknown image id or invalid type - see message for details
+	ERR_BLOG_INVALID_THUMB_IMAGE = 2410,		// Unknown image id or invalid type - see message for details
 
 	/** Streamcount Errors */
 	ERR_STREAMCOUNT_UNAVAILABLE = 2501,
@@ -107,7 +111,9 @@ export const enum errorCode {
 	ERR_GROUP_NAME_IS_CONST = 2704,		// Group name cannot be changed
 
 	/** Schedule Errors */
-	ERR_SCHEDULE_INVALID_RANGE = 2801,	// The given range between start & end is not supported
+	ERR_SCHEDULE_INVALID_RANGE = 2801,			// The given range between start & end is not supported
+	ERR_SCHEDULE_LEGACY_LIMIT_EXCEEDED = 2802,	// The given amount exceeds the supported maximum value
+	ERR_SCHEDULE_LEGACY_NO_RUNNING_ITEM = 2803,	// The current-running-item couldn't be determined
 
 	/** CMS Errors */
 	ERR_CMS_PAGE_NOT_FOUND = 2901,		// The requested identifier was not found
@@ -236,6 +242,17 @@ export const enum errorCode {
 	/** OAuth: Authorizations */
 	ERR_OAUTH_AUTHORIZATION_NOT_FOUND = 4301,			// Given Authorization id is unknown or does not relate to the requesitng apiuser
 
+	/** Mediacenter */
+	ERR_MEDIACENTER_IMAGE_NOT_FOUND = 4401,				// Given Image ID is invalid / not found
+	ERR_MEDIACENTER_IMAGE_ALREADY_PROCESSED = 4402,		// Given Image ID has been already processed
+	ERR_MEDIACENTER_FORM_VALIDATION_ERR = 4403,			// Parameter Validation Failed (string length etc, see data for more info)
+	ERR_MEDIACENTER_IMAGE_PROCESSING_FAILED = 4404,		// Image Processing (scaling, upload) failed
+	ERR_MEDIACENTER_IMAGE_UNPROCESSED = 4405,			// Image is unprocessed, action cannot be performed
+	ERR_MEDIACENTER_UNSUPPORTED_IMAGETYPE = 4406,		// Given Image Type is unknown / unsupported
+	ERR_MEDIACENTER_DELETE_REJECT_IN_USE = 4407,		// Given Image is still being used - cannot be deleted
+
+	/** Cache Administration */
+	ERR_CACHE_INVALID_NAME = 4501,		// Invalid or Unknown Cache Name
 
 	// 
 	ERR_LAST 
