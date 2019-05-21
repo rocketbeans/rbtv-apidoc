@@ -13,6 +13,7 @@ export interface ILegacyMGMTScheduleItem {
 	length: number;		// seconds
 	type: tLegacyMGMTMediaType;
 	game: string;
+	youtube: string;
 };
 
 
