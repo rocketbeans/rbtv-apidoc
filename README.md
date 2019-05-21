@@ -107,7 +107,7 @@ Prepend this URL to each endpoint:
 | limit | number | 4 | (optional) Limits the number of returned blog posts. Maximum is 50. |
 
 ### Returns
-Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/blog/BlogPublic.ts#L20)**
+Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/blog/BlogPublic.ts#L20)**
 
 <br />
 
@@ -129,7 +129,7 @@ Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7
 | limit | number | 4 | (optional) Limits the number of returned blog posts. Maximum is 50. |
 
 ### Returns
-Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/blog/BlogPublic.ts#L54)**
+Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/blog/BlogPublic.ts#L54)**
 
 <br />
 
@@ -150,7 +150,7 @@ Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/bl
 | id | number |  |  The blog post ID |
 
 ### Returns
-Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/blog/BlogPublic.ts#L20)**
+Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/blog/BlogPublic.ts#L20)**
 
 <br />
 
@@ -171,7 +171,7 @@ Interface: **[blogResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7
 | id | number |  |  The blog post ID |
 
 ### Returns
-Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/blog/BlogPublic.ts#L54)**
+Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/blog/BlogPublic.ts#L54)**
 
 <br />
 
@@ -194,7 +194,7 @@ Interface: **[blogPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/bl
 
 
 ### Returns
-Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/shared/bohneportrait.ts#L4)**
+Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/shared/bohneportrait.ts#L4)**
 
 <br />
 
@@ -215,7 +215,7 @@ Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f
 | mgmtid | number |  |  The RocketMGMT ID for this bohne |
 
 ### Returns
-Interface: **[bohneResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/bohne/BohnePublic.ts#L7)**
+Interface: **[bohneResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/bohne/BohnePublic.ts#L7)**
 
 <br />
 
@@ -236,7 +236,7 @@ Interface: **[bohneResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f
 | mgmtid | number |  |  The RocketMGMT ID for this bohne |
 
 ### Returns
-Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/shared/bohneportrait.ts#L4)**
+Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/shared/bohneportrait.ts#L4)**
 
 <br />
 
@@ -259,7 +259,7 @@ Interface: **[bohnePortrait](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f
 
 
 ### Returns
-Interface: **[cmsRouteResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/cms/CMSPublic.ts#L12)**
+Interface: **[cmsRouteResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/cms/CMSPublic.ts#L12)**
 
 <br />
 
@@ -280,7 +280,7 @@ Interface: **[cmsRouteResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/
 | id | string |  |  The Page ID |
 
 ### Returns
-Interface: **[cmsPageResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/cms/CMSPublic.ts#L2)**
+Interface: **[cmsPageResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/cms/CMSPublic.ts#L2)**
 
 <br />
 
@@ -303,7 +303,7 @@ Interface: **[cmsPageResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e
 
 
 ### Returns
-Interface: **[frontendInitResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/frontend/FrontendPublic.ts#L9)**
+Interface: **[frontendInitResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/frontend/FrontendPublic.ts#L9)**
 
 <br />
 
@@ -335,7 +335,7 @@ Interface: **[frontendInitResponse](https://github.com/rocketbeans/rbtv-apidoc/b
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L107)**
+Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L107)**
 
 <br />
 
@@ -356,7 +356,7 @@ Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-
 | id | number |  |  Episode ID |
 
 ### Returns
-Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L107)**
+Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L107)**
 
 <br />
 
@@ -380,7 +380,7 @@ Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L107)**
+Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L107)**
 
 <br />
 
@@ -404,7 +404,7 @@ Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L107)**
+Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L107)**
 
 <br />
 
@@ -427,7 +427,7 @@ Interface: **[mediaEpisodeCombinedResponse](https://github.com/rocketbeans/rbtv-
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -449,7 +449,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | limit | number | 8 | (optional) Number of items to return. Maximum is 50. |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -473,7 +473,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -495,7 +495,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -516,7 +516,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | id | number |  |  Episode ID |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -540,7 +540,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -564,7 +564,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -588,7 +588,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | order | string | ASC | (optional) Sort Order; ASC -&gt; Oldest item First; DESC -&gt; Newest item First |
 
 ### Returns
-Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L101)**
+Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L101)**
 
 <br />
 
@@ -620,7 +620,7 @@ Interface: **[mediaEpisodePreviewCombinedResponse](https://github.com/rocketbean
 | only | string |  | (optional) possible values: podcast | showcase |
 
 ### Returns
-Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L13)**
+Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L13)**
 
 <br />
 
@@ -641,7 +641,7 @@ Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob
 | id | number |  |  Show ID |
 
 ### Returns
-Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L13)**
+Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L13)**
 
 <br />
 
@@ -665,7 +665,7 @@ Interface: **[mediaShowResponse](https://github.com/rocketbeans/rbtv-apidoc/blob
 | only | string |  | (optional) Filters by attribute. Possible values: podcast | showcase |
 
 ### Returns
-Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L33)**
+Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L33)**
 
 <br />
 
@@ -686,7 +686,7 @@ Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apid
 | id | number |  |  Show ID |
 
 ### Returns
-Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L33)**
+Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L33)**
 
 <br />
 
@@ -708,7 +708,7 @@ Interface: **[mediaShowPreviewResponse](https://github.com/rocketbeans/rbtv-apid
 | only | string |  | (optional) Filters by attribute. Possible values: podcast | showcase |
 
 ### Returns
-Interface: **[mediaShowPreviewMiniResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/media/MediaPublic.ts#L43)**
+Interface: **[mediaShowPreviewMiniResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/media/MediaPublic.ts#L43)**
 
 <br />
 
@@ -738,7 +738,7 @@ Interface: **[mediaShowPreviewMiniResponse](https://github.com/rocketbeans/rbtv-
 | endDay | number | startDay+(7*86400) | (optional) Unix timestamp - End Date (will be normalized to day). Maximum requested range is limited to 14 days. |
 
 ### Returns
-Interface: **[schedule](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/schedule/SchedulePublic.ts#L32)**
+Interface: **[schedule](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/schedule/SchedulePublic.ts#L32)**
 
 <br />
 
@@ -753,7 +753,7 @@ Interface: **[schedule](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5
 ## Get current running show
 
 
-<p>Returns the current running/scheduled show<br />Drop-in replacement for http://api.rocketmgmt.de/schedule/current</p>
+<p>Returns the current running/scheduled show<br />Drop-in replacement for http://api.rocketmgmt.de/[1.1/]schedule/current</p>
 
 	GET /schedule/legacy/current
 
@@ -761,14 +761,14 @@ Interface: **[schedule](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5
 
 
 ### Returns
-Interface: **[ILegacyMGMTScheduleItem](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/schedule/ScheduleLegacyPublic.ts#L6)**
+Interface: **[ILegacyMGMTScheduleItem](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/schedule/ScheduleLegacyPublic.ts#L6)**
 
 <br />
 
 ## Get current week schedule
 
 
-<p>Returns the schedule of the current week, not grouped as Array<br />Drop-in replacement for http://api.rocketmgmt.de/schedule</p>
+<p>Returns the schedule of the current week, not grouped as Array<br />Drop-in replacement for http://api.rocketmgmt.de/[1.1/]schedule</p>
 
 	GET /schedule/legacy
 
@@ -776,14 +776,14 @@ Interface: **[ILegacyMGMTScheduleItem](https://github.com/rocketbeans/rbtv-apido
 
 
 ### Returns
-Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/schedule/ScheduleLegacyPublic.ts#L24)**
+Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/schedule/ScheduleLegacyPublic.ts#L25)**
 
 <br />
 
 ## Get current week schedule grouped by day
 
 
-<p>Returns the schedule of the current week, grouped by day<br />Drop-in replacement for http://api.rocketmgmt.de/schedule/weekdays</p>
+<p>Returns the schedule of the current week, grouped by day<br />Drop-in replacement for http://api.rocketmgmt.de/[1.1/]schedule/weekdays</p>
 
 	GET /schedule/legacy/weekdays
 
@@ -791,14 +791,14 @@ Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbt
 
 
 ### Returns
-Interface: **[LegacyMGMTScheduleByDayResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/schedule/ScheduleLegacyPublic.ts#L25)**
+Interface: **[LegacyMGMTScheduleByDayResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/schedule/ScheduleLegacyPublic.ts#L26)**
 
 <br />
 
 ## Get the next n scheduled shows
 
 
-<p>Returns the next n scheduled shows, not grouped as Array<br />Drop-in replacement for http://api.rocketmgmt.de/schedule/next/:items</p>
+<p>Returns the next n scheduled shows, not grouped as Array<br />Drop-in replacement for http://api.rocketmgmt.de/[1.1/]schedule/next/:items</p>
 
 	GET /schedule/legacy/next/:items
 
@@ -806,7 +806,7 @@ Interface: **[LegacyMGMTScheduleByDayResponse](https://github.com/rocketbeans/rb
 
 
 ### Returns
-Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/schedule/ScheduleLegacyPublic.ts#L24)**
+Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/schedule/ScheduleLegacyPublic.ts#L25)**
 
 <br />
 
@@ -836,7 +836,7 @@ Interface: **[LegacyMGMTScheduleListResponse](https://github.com/rocketbeans/rbt
 | limit | number | 8 | (optional) Number of items to return. Maximum is 50. |
 
 ### Returns
-Interface: **[simpleShopItem](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/simpleshop/SimpleShopPublic.ts#L4)**
+Interface: **[simpleShopItem](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/simpleshop/SimpleShopPublic.ts#L4)**
 
 <br />
 
@@ -859,7 +859,7 @@ Interface: **[simpleShopItem](https://github.com/rocketbeans/rbtv-apidoc/blob/e1
 
 
 ### Returns
-Interface: **[streamCount](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/shared/stream.ts#L3)**
+Interface: **[streamCount](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/shared/stream.ts#L3)**
 
 <br />
 
@@ -891,7 +891,7 @@ Interface: **[streamCount](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7e
 | id | number |  |  The Corresponding Entity Id (type related) |
 
 ### Returns
-Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L4)**
+Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L4)**
 
 <br />
 
@@ -915,7 +915,7 @@ Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/b
 | id | number |  |  The Corresponding Entity Id (type related) |
 
 ### Returns
-Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L4)**
+Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L4)**
 
 <br />
 
@@ -939,7 +939,7 @@ Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/b
 | type | number |  |  See: enum SubscriptionType |
 
 ### Returns
-Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L35)**
+Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L35)**
 
 <br />
 
@@ -957,7 +957,7 @@ Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-a
 
 
 ### Returns
-Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L35)**
+Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L35)**
 
 <br />
 
@@ -974,7 +974,7 @@ Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-a
 
 
 ### Returns
-Interface: **[subscriptionListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L29)**
+Interface: **[subscriptionListResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L29)**
 
 <br />
 
@@ -999,7 +999,7 @@ Interface: **[subscriptionListResponse](https://github.com/rocketbeans/rbtv-apid
 | id | number |  |  The Corresponding Entity Id (type related) |
 
 ### Returns
-Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L4)**
+Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L4)**
 
 <br />
 
@@ -1024,7 +1024,7 @@ Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/b
 | id | number |  |  The Corresponding Entity Id (type related) |
 
 ### Returns
-Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L4)**
+Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L4)**
 
 <br />
 
@@ -1048,7 +1048,7 @@ Interface: **[subscriptionResponse](https://github.com/rocketbeans/rbtv-apidoc/b
 | type | number |  |  See: enum SubscriptionType |
 
 ### Returns
-Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/subscription/SubscriptionPublic.ts#L35)**
+Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/subscription/SubscriptionPublic.ts#L35)**
 
 <br />
 
@@ -1073,7 +1073,7 @@ Interface: **[subscriptionDefaultResponse](https://github.com/rocketbeans/rbtv-a
 
 
 ### Returns
-Interface: **[entityUserResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/e1f7eeb5308ab74129769b7d3759d963afa19e90/response/user/UserPublic.ts#L26)**
+Interface: **[entityUserResponse](https://github.com/rocketbeans/rbtv-apidoc/blob/310926cbb03da16f599d00e9b8b3c57d1ecd3980/response/user/UserPublic.ts#L26)**
 
 <br />
 
