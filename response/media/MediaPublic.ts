@@ -119,7 +119,7 @@ export interface mediaPromoBoxContent {
 	set: number;
 	date: Date;
 	visibleUntil?: Date;
-	image: Array<Image>;
+	image: Array<Image> | string;	// Type string is management only
 	title: string;
 	subtitle: string;
 	link: string;

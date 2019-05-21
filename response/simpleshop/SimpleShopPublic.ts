@@ -8,7 +8,7 @@ export interface simpleShopItem {
 	price: string;
 	vat: string;
 	link: string;
-	image: Array<Image>;
+	image: Array<Image> | string;	// Type string is management only
 	sortPrio?: number; // only used in admin
 	ciVisible?: boolean; // only used in admin
 	ciDescription?: string; // only used in admin

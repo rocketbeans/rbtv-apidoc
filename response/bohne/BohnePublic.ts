@@ -11,7 +11,7 @@ export interface bohneResponse {
 	lastname: string;
 	contentMK?: string;
 	contentHTML?: string;
-	portraitImage: Array<Image>;
+	portraitImage: Array<Image> | string;	// Type string is management only
 	public: boolean;
 	listed?: boolean;	// Admin: false = will not be reported in /all endpoints
 	showreelURL?: string;

@@ -46,6 +46,7 @@ export const enum errorCode {
 	/** Bohne Erors (Staffinfo) */
 	ERR_BOHNE_NOT_FOUND = 2201,			// Bohne Not found.
 	ERR_BOHNE_INVALID_ROLE = 2202,		// Unsupported Role.
+	ERR_BOHNE_PORTAIT_INVALID = 2203,	// The given image is unknown or invalid
 
 
 	/** Image Uploader Errors */
@@ -134,6 +135,7 @@ export const enum errorCode {
 	ERR_MEDIA_EPISODE_NOT_FOUND = 3103,			// The request episode does not exist
 	ERR_MEDIA_PROMOBOX_PROMO_NOT_FOUND = 3104,	// The rquested promo does not exist
 	ERR_MEDIA_PROMOBOX_INVALID_TYPE = 3105,		// The given type is invalid
+	ERR_MEDIA_PROMOBOX_IMAGE_INVALID = 3106,	// The given image id is unknown or invalid
 
 	/** Search Errors */
 	ERR_SEARCH_TERM_TOO_SHORT = 3201,	// Search term was too short
@@ -145,8 +147,8 @@ export const enum errorCode {
 	ERR_SUBSCRIPTION_NOT_SUBSCRIBED = 3304,	// The Requested type/id is not subscribed
 
 	/** Simple Shop Errors */
-	ERR_SIMPLESHOP_ITEM_NOT_FOUND = 3401,	// The requested Simple Shop Item does not exist
-
+	ERR_SIMPLESHOP_ITEM_NOT_FOUND = 3401,		// The requested Simple Shop Item does not exist
+	ERR_SIMPLESHOP_ITEM_IMAGE_INVALID = 3402,	// Invalid or unknown image supplied
 
 	/** Supporters Club Errors */
 	ERR_SUPPORTER_IBAN_INVALID = 3501,						// Invalid IBAN (Syntax Error)
