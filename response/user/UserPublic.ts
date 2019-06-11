@@ -32,7 +32,8 @@ export interface entityUserResponse {
 	noPasswordSet?: boolean;		// Not possible via App
 	secondFactorEnabled?: boolean;	// Not possible via App
 	supporterLevel?: SupporterLevel;// Requires scope: user.supporter.status.read
-	permissions?: permissionMap
+	permissions?: permissionMap;
+	rbtvEventTeam?: number | null;	// Requires scope: user.rbtvevent.read, only set during active rbtvevent; null if no team has been chosen (yet)
 };
 
 

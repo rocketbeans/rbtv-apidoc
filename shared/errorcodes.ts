@@ -256,6 +256,23 @@ export const enum errorCode {
 	/** Cache Administration */
 	ERR_CACHE_INVALID_NAME = 4501,		// Invalid or Unknown Cache Name
 
+	/** RBTV Event */
+	ERR_RBTVEVENT_EVENT_NOT_FOUND = 4601,				// No event found with the given slug, or the slug is invalid
+	ERR_RBTVEVENT_EVENT_FORM_VALIDATION_ERR = 4602,		// Form Validation Error -> invalid input (such as invalid characters etc)
+	ERR_RBTVEVENT_EVENT_SLUG_IN_USE = 4603,				// The given Event-Slug is already in use
+	ERR_RBTVEVENT_EVENT_ENABLE_FAIL = 4604,				// Enable Failed (another event still active?)
+	ERR_RBTVEVENT_EVENT_DISABLE_FAIL = 4605,			// Disable Failed (not active?)
+	ERR_RBTVEVENT_EVENT_DELETE_FAIL = 4606,				// Event deletion failed (is the event still active?)
+	ERR_RBTVEVENT_TEAM_NOT_FOUND = 4607,				// The given team does not exist
+	ERR_RBTVEVENT_TEAM_FORM_VALIDATION_ERR = 4608,		// Form Validation Error -> invalid input (such as invalid cahracters, length etc)
+	ERR_RBTVEVENT_TEAM_DELETE_FAIL = 4607,				// Deletion Failed (is the relating event still active?)
+	ERR_RBTVEVENT_NO_ACTIVE_EVENT = 4608,				// No Active Event found (generic error, the given action requires an event being active)
+	ERR_RBTVEVENT_EVENT_INVALID = 4609,					// The given Event is invalid for the requested action.
+	ERR_RBTVEVENT_TEAM_INVALID = 4610,					// The given Team is invalid for the requested action.
+	ERR_RBTVEVENT_TEAM_NOT_JOINABLE = 4611,				// The given Team is not in a joinable state.
+	ERR_RBTVEVENT_TEAM_JOIN_FAILED = 4612,				// Join Request failed (already joined another team?)
+	ERR_RBTVEVENT_EVENT_NOT_JOINED_TEAM = 4613,			// The requesing user has not joined any team for the given event
+
 	// 
 	ERR_LAST 
 };

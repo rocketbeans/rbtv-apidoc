@@ -47,10 +47,20 @@ export enum socketMessageTypes {
 	RA_INTERACTION_EVENT2,	// uses socket-io native parameters for passing data between regietool && api
 	AR_INTERACTION_EVENT,
 
+	// Interaction, Client Side / Frontend
 	AC_DYNINTERACTION_START,
 	AC_DYNINTERACTION_END,
 	AC_DYNINTERACTION_EVENT,
 	CA_DYNINTERACTION_EVENT,
+	AC_DYNINTERACTION_LIST,
+	CA_DYNINTERACTION_REQSTART,	
+
+
+	// RBTV Event
+	AC_RBTVEVENT_ACTIVATED,			// RBTVEvent Active/Activated
+	AC_RBTVEVENT_DEACTIVATED,		// RBTVEvent Stopped
+	AC_RBTVEVENT_CHANGED,			// RBTVEvent Active event changed (name, description, teams..)
+	AC_RBTVEVENT_TEAM_JOINED,		// RBTVEvent Joined Team
 
 	//
 	AC_CONFETTI,

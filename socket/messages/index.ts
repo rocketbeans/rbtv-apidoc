@@ -4,3 +4,4 @@ export * from "./stream";
 export * from "./interaction";
 export * from "./media";
 export * from "./misc";
+export * from "./rbtvevent";

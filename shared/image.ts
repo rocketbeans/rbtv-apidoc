@@ -17,6 +17,7 @@ export const enum ImageType {
 	SIMPLESHOP_PRODUCT,		// Used by SimpleShop - product image
 	RAFFLE_PRIZE_IMAGE,		// Used by Raffle (prize image)
 	BOHNE_PORTRAIT,			// Used by Bohne/StaffInfo
+	RBTVEVENT_TEAMICON,		// Used by RBTV-Event Team - icon
 	LAST
 };
 
