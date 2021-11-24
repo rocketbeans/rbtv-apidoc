@@ -48,7 +48,7 @@ export interface blogResponse {
 	category: blogCategory | string; // can be null,  string incase of admin / post creation, must be category ID
 
 	// Raffles
-	raffle: IRaffleTeaser | number; // can be null , number incase of admin / post creation, must be raffleID
+	raffles: Array<IRaffleTeaser> | Array<number> | null; // can be null, number incase of admin / post creation, must be raffleID
 };
 
 export interface blogPreviewResponse {

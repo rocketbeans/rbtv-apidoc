@@ -1,9 +1,16 @@
-import { tMediaType } from ".";
+import { tMediaType, link } from ".";
+
+export interface streamCountChannelInfo {
+	name: string;
+	url: string;
+	count: number;
+};
 
 export interface streamCount {
 	youtube: number;
 	twitch: number;
 	total: number;
+	external?: Array<streamCountChannelInfo>; // only for legacy API user
 };
 
 export interface streamInfoShow {
@@ -16,12 +23,5 @@ export interface streamInfoShow {
 	timeEnd: Date;
 	progress: number;
 	viewers: streamCount;
+	links: Array<link>;
 };
-
-
-export interface streamInfo {
-	youtubeToken: string;
-	twitchChannel: string;
-	info: streamInfoShow;
-};
-

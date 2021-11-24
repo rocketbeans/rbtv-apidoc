@@ -18,6 +18,8 @@ export const enum ImageType {
 	RAFFLE_PRIZE_IMAGE,		// Used by Raffle (prize image)
 	BOHNE_PORTRAIT,			// Used by Bohne/StaffInfo
 	RBTVEVENT_TEAMICON,		// Used by RBTV-Event Team - icon
+	DIGITALGOODIE_THUMB,	// Used by Digital Goodie System (thumbnail)
+	MAIL,					// Used for Mailing in E-Mails.
 	LAST
 };
 

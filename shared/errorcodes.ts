@@ -5,21 +5,29 @@ export const enum errorCode {
 	ERR_NO_ERROR = 0,
 
 	/** GENERIC ERRORS */
-	ERR_MISSING_PARAMETERS = 1000,			// Missing Parameters for the specified api endpoint 
-	ERR_INVALID_BODYTYPE = 1001,			// Invalid Body Type; used by put / post handlers for parameter verification
-	ERR_WRONG_PARAMETER_TYPE = 1002,		// Wrong Parameter type supplied, for example field must be array, string given.
-	ERR_INVALID_SORT_TYPE = 1003,			// Unsupported sortBy / sort parameters
-	ERR_UNSUPPORTED_SORTING = 1004,	
-	ERR_UNEXPECTED_ARGUMENT = 1005,			// Unexpected Range etc
-	ERR_MISSING_FEATURE = 1006,				// Missing Feature / Unimplemented Code Path
-	ERR_UNEXPECTED = 1007,					// Unexpected Error; such as race-conditions upon registration (email check/namecheck -> final insert conflict etc.. )
-	ERR_PAGINATION_NEEDED = 1008,			// The requested action requires pagination parameters set (offset/limit)
-	ERR_PAGINATION_LIMIT_EXCEEDED = 1009,	// The Requested Limits exceeds the Actions maximum supported limit
-	ERR_PAGINATION_NO_MORE_DATA = 1010,		// The requested action cannot provide any more data for the requested offset.
-	ERR_ACTION_REQUIRES_EMAIL_SET = 1011,	// The requested action requires a valid email set
-	ERR_RECAPTCHA_INVALID = 1012,			// Used to refuse recaptcha challenge
+	ERR_MISSING_PARAMETERS = 1000,				// Missing Parameters for the specified api endpoint 
+	ERR_INVALID_BODYTYPE = 1001,				// Invalid Body Type; used by put / post handlers for parameter verification
+	ERR_WRONG_PARAMETER_TYPE = 1002,			// Wrong Parameter type supplied, for example field must be array, string given.
+	ERR_INVALID_SORT_TYPE = 1003,				// Unsupported sortBy / sort parameters
+	ERR_UNSUPPORTED_SORTING = 1004,
+	ERR_UNEXPECTED_ARGUMENT = 1005,				// Unexpected Range etc
+	ERR_MISSING_FEATURE = 1006,					// Missing Feature / Unimplemented Code Path
+	ERR_UNEXPECTED = 1007,						// Unexpected Error; such as race-conditions upon registration (email check/namecheck -> final insert conflict etc.. )
+	ERR_PAGINATION_NEEDED = 1008,				// The requested action requires pagination parameters set (offset/limit)
+	ERR_PAGINATION_LIMIT_EXCEEDED = 1009,		// The Requested Limits exceeds the Actions maximum supported limit
+	ERR_PAGINATION_NO_MORE_DATA = 1010,			// The requested action cannot provide any more data for the requested offset.
+	ERR_ACTION_REQUIRES_EMAIL_SET = 1011,		// The requested action requires a valid email set
+	ERR_RECAPTCHA_INVALID = 1012,				// Used to refuse recaptcha challenge
+	ERR_APICALL_REMOVED = 1013,					// The requested api call has been removed & is no longer available
+	ERR_INVALID_JSON = 1014,					// Invalid JSON; Usually thrown when incomming json is invalid
+	ERR_TERMS_NOT_ACCEPTED = 1015,				// The requesting User needs to acknowledge our Terms of Service, see data for details (interface TermsErrorData)
+	ERR_QUERY_PARAM_PROCESSING_FAILED = 1016,	// Failed to Process the given query parameters, see errorMessage for details (missing parameter, wrong type, out of bounds)
 
-
+	/** External Api Proxy Errors */
+	ERR_EXTAPIPROXY_CALL_NOT_SUPPORTED = 1100,			// The Requested method or context is not supported
+	ERR_EXTAPIPROXY_UPSTREAM_API_ERROR = 1101,			// Upstream API Returned an Error - contact rocket-beans with provided error id for details
+	
+	
 	/** AUTH ERRORS */
 	ERR_AUTH_TOKEN_INVALID = 2001,								// Invalid or expored token (can be refresh or normal token)
 	ERR_AUTH_MISSING_HEADERS = 2002,							// Missing Authentication header for permission check
@@ -41,12 +49,20 @@ export const enum errorCode {
 	ERR_AUTH_UNSUPPORTED_AUTHORIZATION_SCHEMA = 2714,			// Unsupported Type for 'Authorization'-Header (not Bearer)
 	ERR_AUTH_TOKEN_CREATION_FAILED = 2715,						// Internal error, cannot create token
 	ERR_AUTH_RESETPASS_OAUTH_REG_INCOMPLETE = 2716,				// Password reset refused/failed as the user has not completed his/her external-auth-provider registration (setup of displayname/terms)
-
+	ERR_AUTH_CAPTCHA_REQUIRED = 2717,							// Authentication Requres Captcha being solved (usually happens after a specific amount of failed login-attempts)
+	ERR_AUTH_CAPTCHA_FAIL = 2718,								// Captcha could not be verified 
+	ERR_AUTH_EXTERNAL_TYPE_INVALID = 2719,						// The Requested external provider type is invalid
+	ERR_AUTH_EXTERNAL_TYPE_NOT_AVAILABLE = 2720,				// The Requested external provider is (temporarily) not available
+	ERR_AUTH_EXTERNAL_STATE_NOT_FOUND = 2721,					// The given state does not exist
+	ERR_AUTH_EXTERNAL_STATE_INVALID = 2722,						// The given state is not in an acceptable state for the requested action
+	ERR_AUTH_EXTERNAL_NAVTARGET_INVALID = 2723,					// The given navigationTarget is invalid or exceeds length limits
+	ERR_AUTH_EXTERNAL_MAC_VERIFY_FAILED = 2724,					// Failed to verify request while creating external state
 
 	/** Bohne Erors (Staffinfo) */
-	ERR_BOHNE_NOT_FOUND = 2201,			// Bohne Not found.
-	ERR_BOHNE_INVALID_ROLE = 2202,		// Unsupported Role.
-	ERR_BOHNE_PORTAIT_INVALID = 2203,	// The given image is unknown or invalid
+	ERR_BOHNE_NOT_FOUND = 2201,					// Bohne Not found.
+	ERR_BOHNE_INVALID_ROLE = 2202,				// Unsupported Role.
+	ERR_BOHNE_PORTAIT_INVALID = 2203,			// The given image is unknown or invalid
+	ERR_BOHNE_NO_USERACCOUNT_LINKED = 2204,		// The given Bohne (mgmtid) has no page-user-account linked
 
 
 	/** Image Uploader Errors */
@@ -68,6 +84,7 @@ export const enum errorCode {
 	ERR_BLOG_INVALID_TITLE_IMAGE = 2408,		// Unknown image id or invalid type - see message for details
 	ERR_BLOG_INVALID_PROMO_IMAGE = 2409,		// Unknown image id or invalid type - see message for details
 	ERR_BLOG_INVALID_THUMB_IMAGE = 2410,		// Unknown image id or invalid type - see message for details
+	ERR_BLOG_RAFFLE_INVALID = 2411,				// Requested Raffle does not exist / is uknown
 
 	/** Streamcount Errors */
 	ERR_STREAMCOUNT_UNAVAILABLE = 2501,
@@ -104,6 +121,8 @@ export const enum errorCode {
 	ERR_USER_SECONDFACTOR_REMOVE_FAIL = 2629,			// User is not allowed to remove secondFactor (apps connected as developer?)
 	ERR_USER_SECONDFACTOR_SETUP_TOKENFAIL = 2630,		// User provided secondFactor token for completing the setup is invalid
 	ERR_USER_DELETE_FAIL_HAS_OAUTH_APPS = 2631,			// User can't be deleted, is owner of apps
+	ERR_USER_AUTHPROVIDER_REMOVE_FAIL = 2632,			// Failed to remove association of user<->externalAuthProvider,  failed hard / internal error
+	ERR_USER_ACCOUNT_DELETION_OK = 2633,				// Token found & valid,  account deleted.
 
 	/** Group Errors */
 	ERR_GROUP_NOT_FOUND = 2701,			// Unknown group (id)
@@ -141,10 +160,25 @@ export const enum errorCode {
 	ERR_SEARCH_TERM_TOO_SHORT = 3201,	// Search term was too short
 
 	/** Subscription Errors */
-	ERR_SUBSCRIPTION_INVALID_TYPE = 3301,	// Invalid type (in this context)
-	ERR_SUBSCRIPTION_IMPOSSIBLE = 3302,		// The given Entity can't be subscribed
-	ERR_SUBSCRIPTION_FAILED = 3303,			// Failed to get subscriptions
-	ERR_SUBSCRIPTION_NOT_SUBSCRIBED = 3304,	// The Requested type/id is not subscribed
+	ERR_SUBSCRIPTION_INVALID_TYPE = 3301,						// Invalid type (in this context)
+	ERR_SUBSCRIPTION_IMPOSSIBLE = 3302,							// The given Entity can't be subscribed
+	ERR_SUBSCRIPTION_FAILED = 3303,								// Failed to get subscriptions
+	ERR_SUBSCRIPTION_NOT_SUBSCRIBED = 3304,						// The Requested type/id is not subscribed
+	ERR_SUBSCRIPTION_WEBPUSH_SETUP_INVALID_ENDPOINT = 3305,		// The provided endpoint does not met our specifications (Must be: http or https, non private ip range)
+	ERR_SUBSCRIPTION_WEBPUSH_SETUP_MISSING_P256DH_KEY = 3306,	// Parameter missing
+	ERR_SUBSCRIPTION_WEBPUSH_SETUP_MISSING_AUTH_KEY = 3307,		// Parameter missing
+	ERR_SUBSCRIPTION_WEBPUSH_SETUP_FAILED = 3308,				// Generic Failure while setting up the subscription
+	ERR_SUBSCRIPTION_WEBPUSH_SETUP_LIMITREACHED = 3309,			// The Requesting User has reached the configured limit of web-push subscriptions per-user
+	ERR_SUBSCRIPTION_UPDATE_FAILED = 3310,						// Failed to update the stored properties of an subscription 
+	ERR_SUBSCRIPTION_RESET_FAILED = 3311,						// Failed to reset the given subscription (racing condition: unsubscribed while reset was pending OR this is an internal error)
+	ERR_SUBSCRIPTION_MASS_RESET_FAILED = 3312,					// Failed to mass-reset all subscriptions of a given type (this is an internal error)
+	ERR_SUBSCRIPTION_MASS_UPDATE_FAILED = 3313,					// Failed to mass-update all subscriptions of a given type (this is an internal error)
+	ERR_SUBSCRIPTION_WEBPUSH_APPLE_VERSIONFAIL = 3314,			// Unsupported API Version of Apple WebPush Actions requested
+	ERR_SUBSCRIPTION_WEBPUSH_APPLE_UNHANDLED_WEBSITE = 3315,	// Request for unhandled website 
+	ERR_SUBSCRIPTION_WEBPUSH_APPLE_INVALID_ACCESSTOKEN = 3316,	// Invalid or expired accesstoken when requesting the package
+	ERR_SUBSCRIPTION_WEBPUSH_APPLE_INVALID_AUTHHEADER = 3317,	// Invalid or missing 'authorization' http-header
+	ERR_SUBSCRIPTION_WEBPUSH_APPLE_INVALID_DEVICETOKEN = 3318,	// Invalid/Malformed Device Token
+	
 
 	/** Simple Shop Errors */
 	ERR_SIMPLESHOP_ITEM_NOT_FOUND = 3401,		// The requested Simple Shop Item does not exist
@@ -161,6 +195,8 @@ export const enum errorCode {
 	ERR_SUPPORTER_PAYPAL_NOT_SUBSCRIBED = 3508,				// No Subscription
 	ERR_SUPPORTER_ADDRESS_TERMS_REQUIRED = 3509,			// Must accept the shipping terms to set the address.
 	ERR_SUPPORTER_ADDRESS_FIELD_VALIDATION_ERR = 3510,		// Field validation Error
+	ERR_SUPPORTER_JOINREASON_INVALID_TYPE = 3511,			// The given type is unknown
+	ERR_SUPPORTER_JOINREASON_INVALID_SHOW = 3512,			// The Provided Show does not exist.
 
 
 	/** Interaction */
@@ -257,24 +293,139 @@ export const enum errorCode {
 	ERR_CACHE_INVALID_NAME = 4501,		// Invalid or Unknown Cache Name
 
 	/** RBTV Event */
-	ERR_RBTVEVENT_EVENT_NOT_FOUND = 4601,				// No event found with the given slug, or the slug is invalid
-	ERR_RBTVEVENT_EVENT_FORM_VALIDATION_ERR = 4602,		// Form Validation Error -> invalid input (such as invalid characters etc)
-	ERR_RBTVEVENT_EVENT_SLUG_IN_USE = 4603,				// The given Event-Slug is already in use
-	ERR_RBTVEVENT_EVENT_ENABLE_FAIL = 4604,				// Enable Failed (another event still active?)
-	ERR_RBTVEVENT_EVENT_DISABLE_FAIL = 4605,			// Disable Failed (not active?)
-	ERR_RBTVEVENT_EVENT_DELETE_FAIL = 4606,				// Event deletion failed (is the event still active?)
-	ERR_RBTVEVENT_TEAM_NOT_FOUND = 4607,				// The given team does not exist
-	ERR_RBTVEVENT_TEAM_FORM_VALIDATION_ERR = 4608,		// Form Validation Error -> invalid input (such as invalid cahracters, length etc)
-	ERR_RBTVEVENT_TEAM_DELETE_FAIL = 4607,				// Deletion Failed (is the relating event still active?)
-	ERR_RBTVEVENT_NO_ACTIVE_EVENT = 4608,				// No Active Event found (generic error, the given action requires an event being active)
-	ERR_RBTVEVENT_EVENT_INVALID = 4609,					// The given Event is invalid for the requested action.
-	ERR_RBTVEVENT_TEAM_INVALID = 4610,					// The given Team is invalid for the requested action.
-	ERR_RBTVEVENT_TEAM_NOT_JOINABLE = 4611,				// The given Team is not in a joinable state.
-	ERR_RBTVEVENT_TEAM_JOIN_FAILED = 4612,				// Join Request failed (already joined another team?)
-	ERR_RBTVEVENT_EVENT_NOT_JOINED_TEAM = 4613,			// The requesing user has not joined any team for the given event
+	ERR_RBTVEVENT_EVENT_NOT_FOUND = 4601,						// No event found with the given slug, or the slug is invalid
+	ERR_RBTVEVENT_EVENT_FORM_VALIDATION_ERR = 4602,				// Form Validation Error -> invalid input (such as invalid characters etc)
+	ERR_RBTVEVENT_EVENT_SLUG_IN_USE = 4603,						// The given Event-Slug is already in use
+	ERR_RBTVEVENT_EVENT_ENABLE_FAIL = 4604,						// Enable Failed (another event still active?)
+	ERR_RBTVEVENT_EVENT_DISABLE_FAIL = 4605,					// Disable Failed (not active?)
+	ERR_RBTVEVENT_EVENT_DELETE_FAIL = 4606,						// Event deletion failed (is the event still active?)
+	ERR_RBTVEVENT_TEAM_NOT_FOUND = 4607,						// The given team does not exist
+	ERR_RBTVEVENT_TEAM_FORM_VALIDATION_ERR = 4608,				// Form Validation Error -> invalid input (such as invalid cahracters, length etc)
+	ERR_RBTVEVENT_TEAM_DELETE_FAIL = 4607,						// Deletion Failed (is the relating event still active?)
+	ERR_RBTVEVENT_NO_ACTIVE_EVENT = 4608,						// No Active Event found (generic error, the given action requires an event being active)
+	ERR_RBTVEVENT_EVENT_INVALID = 4609,							// The given Event is invalid for the requested action.
+	ERR_RBTVEVENT_TEAM_INVALID = 4610,							// The given Team is invalid for the requested action.
+	ERR_RBTVEVENT_TEAM_NOT_JOINABLE = 4611,						// The given Team is not in a joinable state.
+	ERR_RBTVEVENT_TEAM_JOIN_FAILED = 4612,						// Join Request failed (already joined another team?)
+	ERR_RBTVEVENT_EVENT_NOT_JOINED_TEAM = 4613,					// The requesing user has not joined any team for the given event
+	ERR_RBTVEVENT_TEAM_DELETION_FAIL_RELINTERACTIONS = 4614,	// Team deletion failed, the team has relating interactions
+	ERR_RBTVEVENT_EVENT_DELETION_FAIL_RELINTERACTIONS = 4615,	// Event deletion failed, the event has relating interactions
 
-	// 
+	/** Cheatcodes */
+	ERR_CHEATCODESET_NOT_FOUND = 4701,				// The Requested Cheatcode Set does not exist
+	ERR_CHEATCODESET_FORM_VALIDATION_ERR = 4702,	// Form Validation Error -> invalid input (such as invalid characters etc)
+	ERR_CHEATCODESET_ALREADY_IN_USE = 4703,			// The requested name is already in use
+	ERR_CHEATCODE_NOT_FOUND = 4711,					// The requested cheatcode (id) does not exist
+	ERR_CHEATCODE_FORM_VALIDATION_ERR = 4712,		// Form Validation Error -> invalid input (such as invalid characters etc)
+	ERR_CHEATCODE_DELETE_FAIL = 4713,				// Deletion of cheatcode failed -> is the code still marked active?
+
+	/** Instance Manager */
+	ERR_INSTANCES_UNKNOWN = 4801,			// The Requested InstanceID is unknown
+
+	/** Hypescore / Games */
+	ERR_HYPESCORE_GAME_NOT_FOUND = 4901,		// The rqeuested Game (id) is unknown
+	ERR_HYPESCORE_SEARCH_INVALIDQUERY = 4902,	// The Given Search query was too short or too long
+	ERR_HYPESCORE_INVALID_SCORE_VALUE = 4903,	// The Given score/rating value is invalid (allowed: 1-10)
+	ERR_HYPESCORE_GAME_SYNC_FAIL = 4904,		// Updating Game Database failed (mgmt)
+	ERR_HYPESCORE_GAME_OVER = 4905,				// The Given game's voting is disabled (for example: Game released)
+		
+
+	/** Device / RBSC Wall */
+	ERR_DEVICE_NOT_FOUND = 5001,						// The requested deveice (mac) does not exist
+	ERR_DEVICE_DELETION_FAILED = 5002,					// Deletion failed.
+	ERR_DEVICE_FILE_NOT_FOUND = 5003,					// File Id not found/invalid
+	ERR_DEVICE_KEY_INVALID = 5004,						// Preshare Key invalid
+	ERR_RBSCWALL_SET_NOT_FOUND = 5011, 					// RBSC Wall Display set id invalid / display set not found
+	ERR_RBSCWALL_DISPLAY_NOT_FOUND = 5021,				// RBSC Wall Display invalid / display not found
+	ERR_RBSCWALL_CREATE_DEVICE_ALREADY_IN_USE = 5022,	// RBSC Wall Display Creation failed, the given Device (mac) is already assigned 
+	RRR_RBSCWALL_DISPLAY_INVALID_KEY = 5023,			// RBSC Wall Display - invalid preshared key (init)
+	
+	ERR_RBSCWALL_QR_VERIFY_FAILED = 5031,				// The Given QR Payload is invalid / expired
+	ERR_RBSCWALL_REGISTER_FAILED_UNKNOWN_DISPLAY = 5032,// Register as visitor failed - the referenced display seems to be unknown?
+	ERR_RBSCWALL_REGISTER_FAILED = 5033,				// Registration failed internally
+	ERR_RBSCWALL_ANIMATIONTOKEN_INVALID = 5034,			// The given Animation token is invalid / unknown / expired
+	ERR_RBSCWALL_DISPLAY_BUSY = 5035,					// The given Animation token is valid, but the display is busy
+		
+
+	/** User Property */
+	ERR_USERPROP_NOT_FOUND = 5101,				// The Requested User Propery does not exist / is known / not set 
+	ERR_USERPROP_INVALID_KEY = 5102,			// The Requested Key is unknown or does not met the rquirements
+	ERR_USERPROP_DELETE_FAIL = 5103,			// Invalid Key or internal error
+	ERR_USERPROP_TYPE_NOT_ALLOWED = 5104,		// The given value data-type is not accepted by the specified property key
+	ERR_USERPROP_STRLEN_EXCEEDS_LIMIT = 5105,	// The given value exceeds the maximum length allowed for string contents
+	ERR_USERPROP_OBJLEN_EXCEEDS_LIMIT = 5106,	// The given value exceeds the maximum serialized object-length 
+	ERR_USERPROP_WRITE_RESTRICTED = 5107,		// The given property cannot be changed, write restriction enabled
+	ERR_USERPROP_INVALID_DEFAULT = 5108,		// The supplied default-value configuration is invalid, see errormessage for details
+	ERR_USERPROP_MASS_RESET_FAILED = 5109,
+	ERR_USERPROP_MASS_INIT_FAILED = 5110,
+	ERR_USERPROP_MASS_DELETE_FAILED = 5111,
+
+
+	/** Superchad **/
+	ERR_SUPERCHAD_MESSAGE_NOT_FOUND = 5201, 	// The given Message identifier is unknown / not found (or may be already expired)
+
+
+	/** GoodiePool **/
+	ERR_GOODIEPOOL_CLAIM_FAIL = 5301,					// Generic failure, caused by an unexpected internal error
+	ERR_GOODIEPOOL_CLAIM_FAIL_NOT_ELIGIBLE = 5302,		// User does not met the requirements of the given Pool (such as SupporterLevel)
+	ERR_GOODIEPOOL_CLAIM_FAIL_ALREADY_CLAIMED = 5303,	// User has already claimed the given Pool
+	ERR_GOODIEPOOL_CLAIM_FAIL_OUT_OF_STOCK = 5304,		// The Pool is empty :(
+	ERR_GOODIEPOOL_CLAIM_FAIL_EAGAIN = 5305,			// Try Again - may be caused by an internal race condition ..
+	ERR_GOODIEPOOL_CLAIM_FAIL_UNKNOWN_POOL = 5306,		// The given Pool does not exist or may be expired.
+
+
+	/** SupporterMassMail **/
+	ERR_SUPPORTERMASSMAIL_INVALID_TEMPLATE = 5401,			// Unknown Template Id
+	ERR_SUPPORTERMASSMAIL_PARAM_VALIDATION_ERROR = 5402,	// Invalid parameters supplied.
+	ERR_SUPPORTERMASSMAIL_SEND_VERSION_MISMATCH = 5403,		// The given version does not match the stored Template version
+	ERR_SUPPORTERMASSMAIL_BUSY = 5404,						// The System is still busy/processing the last mass-mailing request.
+
+	/** Suporter Shop Email **/
+	ERR_SHOP_MAIL_INVALID = 6000,
+
+	/** Poll **/
+	ERR_POLL_UNKNOWN = 7000,
+	ERR_POLL_QUESTION_TOO_LONG = 7010,
+	ERR_POLL_OPTION_TOO_LONG = 7020,
+	ERR_POLL_NOT_ENOUGH_OPTIONS = 7030,
+	ERR_POLL_TOO_MANY_OPTIONS = 7035,
+	ERR_POLL_NOT_FOUND = 7040,
+	ERR_POLL_STOP_GREATER_START_DATE = 7050,
+	ERR_POLL_MIN_GREATER_MAX_SELECT = 7060,
+	ERR_POLL_CANT_SWITCH_MODE_WHEN_ACTIVE = 7070,
+	ERR_POLL_VOTE_OPTION_UNKNOWN = 7080,
+	ERR_POLL_CANT_CHANGE_VOTE = 7090,
+	ERR_POLL_MIN_SELECT_NOT_GREATER_ZERO = 7100,
+	ERR_POLL_MAX_SELECT_NOT_GREATER_ONE = 7110,
+	ERR_POLL_CANT_VOTE_NOT_STARTED = 7120,
+	ERR_POLL_CANT_VOTE_ENDED = 7125,
+	ERR_POLL_CANT_VOTE_SUPPORTER_LEVEL_TOO_LOW = 7130,
+	ERR_POLL_VOTE_FAILED = 7140,
+	ERR_POLL_UPDATE_FAILED = 7150,
+	ERR_POLL_DELETE_FAILED = 7160,
+
+	/** Playlists **/
+	ERR_PLAYLIST_UNKNOWN = 8000,
+	ERR_PLAYLIST_NOT_FOUND = 8010,
+	ERR_PLAYLIST_NOT_ENOUGH_MEDIA_IDS = 8030,
+	ERR_PLAYLIST_REBALANCE_FAILED = 8040,
+	ERR_PLAYLIST_ADD_ITEMS_FAILED = 8050,
+	ERR_PLAYLIST_MOVE_ITEMS_FAILED = 8060,
+	ERR_PLAYLIST_DELETE_ITEMS_FAILED = 8070,
+	ERR_PLAYLIST_UNKNOWN_INSERT_ITEM_AT = 8080,
+	ERR_PLAYLIST_CALCULATE_INDEX_FAILED = 8090,
+	ERR_PLAYLIST_NOT_ENTOUGH_PLAYLIST_ITEM_IDS = 8100,
+	ERR_PLAYLIST_CREATE_FAILED = 8110,
+	ERR_PLAYLIST_INVALID_NAME_LENGTH = 8120,
+	ERR_PLAYLIST_INVALID_DESCRIPTIONS_LENGTH = 8130,
+	ERR_PLAYLIST_TOO_MANY_PLAYLISTS = 8140,
+	ERR_PLAYLIST_TOO_MANY_PLAYLISTITEMS = 8150,
+
+	ERR_CLOUDFLARE_TOKEN_VIDEO_NOT_FOUND = 9000,
+	ERR_CLOUDFLARE_TOKEN_VIDEO_NOT_AUTHORIZED = 9010,
+	ERR_CLOUDFLARE_TOKEN_API_RATE_LIMIT_HIT = 9020,
+	ERR_CLOUDFLARE_TOKEN_ACTIVE_LIMIT_HIT = 9030,
+
+	//
 	ERR_LAST 
 };
-
-

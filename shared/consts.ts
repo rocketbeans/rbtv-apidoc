@@ -12,12 +12,6 @@ export namespace consts {
 	export const AUTH_QUERY = 'apiAuthKey';
 
 	//
-	// Cookie name used for Authentication/Authorization
-	//
-	export const AUTH_COOKIE = 'apitoken';
-
-
-	//
 	// Default Group any user gets assigned to
 	//
 	export const USER_DEFAULT_GROUP = 'user';

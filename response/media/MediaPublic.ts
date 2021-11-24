@@ -8,6 +8,7 @@ export interface mediaShowPodcastInfo {
 	soundcloudId: string;
 	itunesUrl: string;
 	spotifyUrl: string;
+	podigeeUrl: string;
 };
 
 export interface mediaShowResponse {
@@ -17,6 +18,7 @@ export interface mediaShowResponse {
 	genre: string;
 	duration: number;
 	isExternal: boolean;
+	isTruePodcast: boolean;
 	thumbnail: Array<Image>;
 	backgroundImage?: Array<Image>;
 	slideshowImages: Array<Array<Image>>;
@@ -35,6 +37,7 @@ export interface mediaShowPreviewResponse {
 	title: string;
 	genre: string;
 	isExternal: boolean;
+	isTruePodcast: boolean;
 	thumbnail: Array<Image>;
 	hasPodcast: boolean;
 	isSubscribed?: boolean;
@@ -64,6 +67,14 @@ export interface mediaSeasonResponse {
 // Episode 
 //
 
+export interface videoToken {
+	id: number;
+	mediaEpisodeId: number;
+	token: string;
+	type: 'youtube' | 'twitch' | 'cloudflare';
+	length: number;
+}
+
 export interface mediaEpisode {
 	id: number;
 	showId: number;
@@ -75,11 +86,14 @@ export interface mediaEpisode {
 	thumbnail: Array<Image>;
 	links: Array<link>;
 	hosts: Array<number>; // Array of MGMTID
-	youtubeTokens: Array<string>;
+	tokens: Array<videoToken>;
+	distributionPublishingDate: Date;
 	firstBroadcastdate: Date;
 	duration: number; // seconds
+	prev?: mediaEpisodePreview;
+	next?: mediaEpisodePreview;
+	isAvailable: boolean;		// true if distributionPublishingDate < now() && tokens.length > 0
 };
-
 
 export interface mediaEpisodePreview {
 	id: number;
@@ -88,8 +102,10 @@ export interface mediaEpisodePreview {
 	showName: string;
 	thumbnail: Array<Image>;
 	hosts: Array<number>; // Array of MGMTID
+	distributionPublishingDate: Date;
 	firstBroadcastdate: Date;
 	duration: number;
+	isAvailable: boolean;		// true if distributionPublishingDate < now() && tokens.length > 0
 }
 
 export interface mediaEpisodeProgress {
@@ -128,4 +144,9 @@ export interface mediaPromoBoxContent {
 
 export interface mediaCurrentPromoBoxResponse {
 	content: mediaPromoBoxContent[];
+}
+
+export interface CloudflareToken {
+	signedToken: string;
+	validUntil: Date;
 }

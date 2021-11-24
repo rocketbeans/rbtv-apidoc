@@ -1,5 +1,4 @@
-import { cmsRouteResponse, authProvider } from "../";
-import { streamInfo } from "../../shared";
+import { cmsRouteResponse, authProvider, ChannelGroupInfo } from "../";
 
 export interface websocketParameters {
 	url: string;
@@ -10,8 +9,11 @@ export interface frontendInitResponse {
 	routes: cmsRouteResponse[];
 	authProviders: authProvider[];
 	websocket: websocketParameters;
-	streamInfo: streamInfo;
+	channelGroupInfo: ChannelGroupInfo;
 	recaptchaSiteKey: string;
 	pageTheme: string;
 	randomYoutubeApiKey: string;
+	frontendVersion: number;		// recommended frontend version
+	vapidPublicKey?: string;
+	applePushId?: string;
 };

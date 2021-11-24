@@ -5,3 +5,5 @@ export * from "./interaction";
 export * from "./media";
 export * from "./misc";
 export * from "./rbtvevent";
+export * from "./user";
+export * from "./superchad";

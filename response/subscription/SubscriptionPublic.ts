@@ -36,3 +36,17 @@ export interface subscriptionDefaultResponse {
 	type: SubscriptionType;
 	flags: SubscriptionFlags;
 };
+
+//
+// V2 - Refactor Notificaiton
+//
+
+export interface subscriptionData {
+	type: SubscriptionType;
+	id: number;
+	name: string;
+	flags: SubscriptionFlags;
+	isDefault: boolean;
+};
+
+export type subscriptionListV2Response = Array<subscriptionData>;

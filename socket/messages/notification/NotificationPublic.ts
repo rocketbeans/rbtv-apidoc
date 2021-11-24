@@ -1,4 +1,5 @@
 import { NotificationType, Image } from "../../../shared/"
+import { UserDigitalGoodieType } from "../../../response";
 
 export interface CA_NOTIFICATION_READ {
 	id: number;
@@ -17,7 +18,7 @@ export interface AC_NOTIFICATION_READ {
 	date: Date;
 };
 
-export interface CA_NOTIFICATION_DELETE_ALL {}; 
+export interface CA_NOTIFICATION_DELETE_ALL {};
 export interface AC_NOTIFICATION_DELETE_ALL {};
 
 
@@ -79,7 +80,10 @@ export interface NotificationDataBohneNewShow {
 export interface NotificationDataShowLive {
 	title: string;
 	id: number;
-	thumbnail: string; // Schedule has own thumbnails which were not available in multiple sizes, yet 
+	date: Date;			// Date when the show is live
+	aheadStep: number;	// ahead-of-live step that has generated this notification, in Minutes (Example: if its 60 this means the item will be live in 60 mintes)
+	thumbnail: string; // Schedule has own thumbnails which were not available in multiple sizes, yet
+	channelGroups: Array<string>;
 };
 
 export interface NotificationDataBohneLive {
@@ -89,7 +93,10 @@ export interface NotificationDataBohneLive {
 	title: string;
 	show: string;
 	id: number;
-	thumbnail: string; // Schedule has own thumbnails which were not available in multiple sizes, yet 
+	date: Date;		// Date when the bohne is live
+	aheadStep: number;	// ahead-of-live step that has generated this notification, in Minutes (Example: if its 60 this means the item will be live in 60 mintes)
+	thumbnail: string; // Schedule has own thumbnails which were not available in multiple sizes, yet
+	channelGroups: Array<string>;
 };
 
 export interface NotificationDataNewBlogPost {
@@ -121,4 +128,16 @@ export interface NotificationDataRaffleShippedInfo {
 	slug: string;	// Slug
 	prizeTitle: string; // Title of Prize
 	prizeImage: Array<Image>;
+};
+
+export interface NotificationDataUserNewDigitalGoodie {
+	title: string;
+	goodieType: UserDigitalGoodieType;
+};
+
+export interface NotificationDataUserNewClaimableGoodie {
+	customTitle: string | null;	// if set, this should be the title displayed by your application
+	customBody: string | null;	// if set, this should be the body displayed by your application
+	title: string;
+	goodieType: UserDigitalGoodieType;
 };
