@@ -1,7 +1,9 @@
+import { SupporterLevel } from "../../../shared/supporter";
+
 export enum ChatMessageSource {
 	TWITCH,
 	YOUTUBE
-}
+};
 
 export interface ChatChannelInfo {
 	iconUrl: string;
@@ -14,12 +16,12 @@ export interface TwitchSpecialPayload {
 	uuid: string,
 	mod: boolean,
 	subscriber: boolean
-}
+};
 
 export interface YoutubeSpecialPayload {
 	uuid: string;
 	mod: boolean;
-}
+};
 
 export interface AC_CHAT_MESSAGE {
 	uuid: string;
@@ -32,8 +34,8 @@ export interface AC_CHAT_MESSAGE {
 	userIdentifier: string;
 	userPlatformIdentifier: string; // unique user id
 	specialPayload: TwitchSpecialPayload | YoutubeSpecialPayload;
-	supporterLevel?: number; // supporter level (only set if user has agreed to show it publicly)
-}
+	supporterLevel?: SupporterLevel; // supporter level (only set if user has agreed to show it publicly)
+};
 
 export interface AC_PUBLIC_CHAT_MESSAGE {
 	uuid: string;
@@ -44,5 +46,5 @@ export interface AC_PUBLIC_CHAT_MESSAGE {
 	user: string;
 	userIdentifier: string;
 	specialPayload: TwitchSpecialPayload | YoutubeSpecialPayload;
-	supporterLevel?: number; // supporter level (only set if user has aggreed to show it publicly)
+	supporterLevel?: SupporterLevel; // supporter level (only set if user has aggreed to show it publicly)
 };

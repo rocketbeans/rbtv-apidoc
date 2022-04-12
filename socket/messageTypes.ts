@@ -127,5 +127,17 @@ export enum socketMessageTypes {
 	CA_PASSWORD_AUTHENTICATION,
 	CA_REFRESH_TOKEN,
 	AC_PASSWORD_AUTHENTICATION_RESULT,
-	AC_REFRESH_TOKEN_RESULT
+	AC_REFRESH_TOKEN_RESULT,
+
+	// Will let the client know about enabled or disabled features (for use with A/B Tests, Experimental features, Paid features, etc.. )
+	// Note: 
+	//  Typically enable messages are being sent after websocket connect and also after authentication (as the given account may have access to special features) 
+	//	your user interface implementation should be able to handle 'disable' messages at any given time
+	//
+	AC_APIFEATURE_ENABLE,				// Tells the user interface implementation about an enabled feature
+	AC_APIFEATURES_ENABLE,				// Tells the user interface implementation about multiple enabled features (you should implement both, AC_APIFEATURES_ENABLE aswell as AC_APIFEATURE_ENABLE)
+	AC_APIFEATURE_DISABLE,				// Tells the user interface implementation about a feature being disabled / unavailable
+	AC_APIFEATURES_DISABLE,				// Tells the user interface implementation about multiple features being disabled / unavailable (you should implement both, AC_APIFEATURES_DISABLE as well as AC_APIFEATURE_DISABLE)
+
+	AC_DONATION_CAMPAIGN_UPDATE		// Used to fan out donation campaign updates
 };

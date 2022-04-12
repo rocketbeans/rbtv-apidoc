@@ -22,6 +22,7 @@ export const enum errorCode {
 	ERR_INVALID_JSON = 1014,					// Invalid JSON; Usually thrown when incomming json is invalid
 	ERR_TERMS_NOT_ACCEPTED = 1015,				// The requesting User needs to acknowledge our Terms of Service, see data for details (interface TermsErrorData)
 	ERR_QUERY_PARAM_PROCESSING_FAILED = 1016,	// Failed to Process the given query parameters, see errorMessage for details (missing parameter, wrong type, out of bounds)
+	ERR_IP_RESTRICTED = 1017,					// The requested route/action is ip-restricted
 
 	/** External Api Proxy Errors */
 	ERR_EXTAPIPROXY_CALL_NOT_SUPPORTED = 1100,			// The Requested method or context is not supported
@@ -57,6 +58,8 @@ export const enum errorCode {
 	ERR_AUTH_EXTERNAL_STATE_INVALID = 2722,						// The given state is not in an acceptable state for the requested action
 	ERR_AUTH_EXTERNAL_NAVTARGET_INVALID = 2723,					// The given navigationTarget is invalid or exceeds length limits
 	ERR_AUTH_EXTERNAL_MAC_VERIFY_FAILED = 2724,					// Failed to verify request while creating external state
+	ERR_AUTH_2FA_REQUIRED = 2725,								// The Requested Route requires the user to have 2FA enabled
+	ERR_AUTH_SPECIAL_PERMISSION_REQUIRED = 2726,				// The Requested Route requires a special access-permission
 
 	/** Bohne Erors (Staffinfo) */
 	ERR_BOHNE_NOT_FOUND = 2201,					// Bohne Not found.
@@ -197,7 +200,7 @@ export const enum errorCode {
 	ERR_SUPPORTER_ADDRESS_FIELD_VALIDATION_ERR = 3510,		// Field validation Error
 	ERR_SUPPORTER_JOINREASON_INVALID_TYPE = 3511,			// The given type is unknown
 	ERR_SUPPORTER_JOINREASON_INVALID_SHOW = 3512,			// The Provided Show does not exist.
-
+	ERR_SUPPORTER_UNKNOWN_SUBSCRIPTION = 3513,
 
 	/** Interaction */
 	ERR_INTERACTION_UNSUPPORTED_TYPE = 3601,			// tried to create an unsupported interaction
@@ -421,10 +424,15 @@ export const enum errorCode {
 	ERR_PLAYLIST_TOO_MANY_PLAYLISTS = 8140,
 	ERR_PLAYLIST_TOO_MANY_PLAYLISTITEMS = 8150,
 
-	ERR_CLOUDFLARE_TOKEN_VIDEO_NOT_FOUND = 9000,
-	ERR_CLOUDFLARE_TOKEN_VIDEO_NOT_AUTHORIZED = 9010,
-	ERR_CLOUDFLARE_TOKEN_API_RATE_LIMIT_HIT = 9020,
-	ERR_CLOUDFLARE_TOKEN_ACTIVE_LIMIT_HIT = 9030,
+	ERR_RBSC_VIDEO_TOKEN_VIDEO_NOT_FOUND = 9000,
+	ERR_RBSC_VIDEO_TOKEN_VIDEO_NOT_AUTHORIZED = 9010,
+	ERR_RBSC_VIDEO_TOKEN_API_RATE_LIMIT_HIT = 9020,
+	ERR_RBSC_VIDEO_TOKEN_ACTIVE_LIMIT_HIT = 9030,
+
+	ERR_USER_DONATION_UNKNOWN = 10000,
+	ERR_USER_DONATION_CAMPAIGN_UNKNOWN = 10010,
+	ERR_USER_DONATION_NOT_AUTHORIZED = 10020,
+	ERR_USER_DONATION_BETTERPLACE_DONATION_UNKNOWN = 10030,
 
 	//
 	ERR_LAST 

@@ -30,6 +30,12 @@ export interface AC_NOTIFICATION<T> {
 	data: T;
 };
 
+export interface GenericNotification {
+	title: string;
+	text: string;
+	url?: string;
+};
+
 export interface NotificationDataRegie {
 	title: string;
 	message: string;
@@ -140,4 +146,11 @@ export interface NotificationDataUserNewClaimableGoodie {
 	customBody: string | null;	// if set, this should be the body displayed by your application
 	title: string;
 	goodieType: UserDigitalGoodieType;
+};
+
+
+export interface NotificationDataGenericText {
+	title: string; // title entered by admin user
+	body: string;	// text entered by admin user
+	url?: string; // url to go to when clicking on notification, as set by admin user
 };

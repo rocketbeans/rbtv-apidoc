@@ -3,7 +3,7 @@ import { cmsRouteResponse, authProvider, ChannelGroupInfo } from "../";
 export interface websocketParameters {
 	url: string;
 	path: string;
-}
+};
 
 export interface frontendInitResponse {
 	routes: cmsRouteResponse[];
@@ -16,4 +16,5 @@ export interface frontendInitResponse {
 	frontendVersion: number;		// recommended frontend version
 	vapidPublicKey?: string;
 	applePushId?: string;
+	videoProgressUpdateInterval: number;	// time in ms between progress update messages
 };

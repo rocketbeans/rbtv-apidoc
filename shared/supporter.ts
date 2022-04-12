@@ -5,14 +5,18 @@ export const enum SupporterPaymentProvider {
 	PAYPAL_OLD = 1,
 	BANKTRANSFER = 2,
 	MANUAL_POSTING = 3,
-	YOUTUBE_SUBSCRIPTION = 4
+	YOUTUBE_SUBSCRIPTION = 4,
+	// Needs to be always the last item:
+	NUM_PROVIDERS
 };
 
 export const enum SupporterLevel {
 	NONE = 0,
-	SUPPORTER = 1,
-	CLUBMEMBER = 2,
-	TIER3 = 3
+	TIER1 = 1,
+	TIER2 = 2,
+	TIER3 = 3,
+	SUPPORTER = SupporterLevel.TIER1,			// deprecated, kept for legacy systems. use TIER1 instead
+	CLUBMEMBER = SupporterLevel.TIER2			// deprecated, kept for legacy systems. use TIER2 instead
 };
 
 export interface ISupporterInfo {

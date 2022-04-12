@@ -14,6 +14,7 @@ export const enum NotificationType {
 	NT_RAFFLE_SHIPPEDINFO,	// Raffle -> Shipped!
 	NT_NEW_DIGITAL_GOODIE,	// New Digital goodie received.
 	NT_NEW_CLAIMABLE_GOODIE,	// New Digital goodie recieved that first needs to be claimed.
+	NT_GENERIC_TEXT,			// Custom text notification, sent via admin
 	NT_NUM
 };
 

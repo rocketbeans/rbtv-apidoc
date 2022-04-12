@@ -7,3 +7,5 @@ export * from "./misc";
 export * from "./rbtvevent";
 export * from "./user";
 export * from "./superchad";
+export * from "./apifeature";
+export * from "./donation";

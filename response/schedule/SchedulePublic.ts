@@ -1,4 +1,4 @@
-import { ChannelGroup, Channel } from "..";
+import { ChannelGroup, videoToken } from "..";
 import { bohnePortrait, tMediaType, Image, link } from "../../shared/";
 
 export interface scheduleItem {
@@ -36,6 +36,11 @@ export interface scheduleItem {
 	openEnd: boolean;
 };
 
+export enum PublishingDelayState {
+	ON_TIME = 0,
+	PROBABLY_DELAYED,
+	DELAYED
+};
 
 // Note:
 //  a schedule object always represents one day
@@ -62,6 +67,8 @@ export interface UploadSchedule {
 
 export interface UploadScheduleEntry {
 	id: number; // === mediaEpisodeId
+	tokens?: Array<videoToken>;	// video tokens if present
+	bohnen?: Array<bohnePortrait>; // bohnen if present
 	uploadDate: Date;  // wann das Video hochgeladen wird/wurde
 	publishingDate?: Date; // siehe Schedule; wenn das Video im Livestream lief, wann lief es? (OPTIONAL; wenn zu nervig, weglassen) 
 	title: string;  // media Episode Title
@@ -69,4 +76,6 @@ export interface UploadScheduleEntry {
 	showId: number; // id der Show des Videos
 	showTitle: string; // Showname
 	showThumbnail: Image[]; // Show Poster Bilder
+	publishingDelayState?: PublishingDelayState;
+	publishingDelayComment?: string;
 };

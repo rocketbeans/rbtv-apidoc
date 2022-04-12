@@ -9,6 +9,7 @@ export interface mediaShowPodcastInfo {
 	itunesUrl: string;
 	spotifyUrl: string;
 	podigeeUrl: string;
+	lastEpisodeDate: Date;
 };
 
 export interface mediaShowResponse {
@@ -19,11 +20,12 @@ export interface mediaShowResponse {
 	duration: number;
 	isExternal: boolean;
 	isTruePodcast: boolean;
+	isPodcastHighlight: boolean;
 	thumbnail: Array<Image>;
 	backgroundImage?: Array<Image>;
 	slideshowImages: Array<Array<Image>>;
 	links: Array<link>;
-	hosts: Array<bohnePortrait>;
+	hosts?: Array<bohnePortrait>;
 	seasons: Array<mediaSeasonResponse>;
 	hasUnsortedEpisodes: boolean;  // true if the show has episodes that are not linked to a season :( 
 	lastEpisode: mediaEpisodeCombinedResponse;
@@ -38,6 +40,7 @@ export interface mediaShowPreviewResponse {
 	genre: string;
 	isExternal: boolean;
 	isTruePodcast: boolean;
+	isPodcastHighlight: boolean;
 	thumbnail: Array<Image>;
 	hasPodcast: boolean;
 	isSubscribed?: boolean;
@@ -71,7 +74,7 @@ export interface videoToken {
 	id: number;
 	mediaEpisodeId: number;
 	token: string;
-	type: 'youtube' | 'twitch' | 'cloudflare';
+	type: 'youtube' | 'twitch' | 'rbsc' | 'unknown';
 	length: number;
 }
 
@@ -79,8 +82,8 @@ export interface mediaEpisode {
 	id: number;
 	showId: number;
 	showName: string;
-	seasonId: number;
-	episode: number;
+	seasonId?: number;
+	episode?: number;
 	title: string;
 	description: string;
 	thumbnail: Array<Image>;
@@ -88,7 +91,7 @@ export interface mediaEpisode {
 	hosts: Array<number>; // Array of MGMTID
 	tokens: Array<videoToken>;
 	distributionPublishingDate: Date;
-	firstBroadcastdate: Date;
+	firstBroadcastdate?: Date;
 	duration: number; // seconds
 	prev?: mediaEpisodePreview;
 	next?: mediaEpisodePreview;
@@ -102,16 +105,24 @@ export interface mediaEpisodePreview {
 	showName: string;
 	thumbnail: Array<Image>;
 	hosts: Array<number>; // Array of MGMTID
+	tokens: Array<videoToken>;
 	distributionPublishingDate: Date;
-	firstBroadcastdate: Date;
+	firstBroadcastdate?: Date;
 	duration: number;
 	isAvailable: boolean;		// true if distributionPublishingDate < now() && tokens.length > 0
 }
 
-export interface mediaEpisodeProgress {
-	lastSeenPart: number;
+export interface TokenProgress {
+	tokenId: number;
+	progress: number;
 	total: number;
-	progress: Array<number>;
+	watched: boolean;
+}
+
+export interface mediaEpisodeProgress {
+	lastSeenTokenId?: number;
+	watched: boolean;
+	tokenProgress: Array<TokenProgress>;
 }
 
 export interface mediaEpisodePreviewCombinedResponse {
@@ -126,6 +137,9 @@ export interface mediaEpisodeCombinedResponse {
 	progress?: { [episodeid: number]: mediaEpisodeProgress }; // User Specific Episode Progress; Will be sent if authenticated 
 }
 
+export interface mediaEpisodeRandomVideoResponse {
+	episodeId: number;
+}
 
 //
 // PromoBox
@@ -146,7 +160,7 @@ export interface mediaCurrentPromoBoxResponse {
 	content: mediaPromoBoxContent[];
 }
 
-export interface CloudflareToken {
+export interface RBSCVideoToken {
 	signedToken: string;
 	validUntil: Date;
 }

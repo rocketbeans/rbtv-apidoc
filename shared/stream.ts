@@ -1,7 +1,9 @@
 import { tMediaType, link } from ".";
+import { ServiceType } from "../response";
 
 export interface streamCountChannelInfo {
 	name: string;
+	serviceType: ServiceType;
 	url: string;
 	count: number;
 };
